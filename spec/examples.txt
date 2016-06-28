@@ -1,0 +1,5 @@
+example_id                  | status | run_time        |
+--------------------------- | ------ | --------------- |
+./spec/image_spec.rb[1:1:1] | passed | 0.00197 seconds |
+./spec/image_spec.rb[1:2:1] | passed | 0.00024 seconds |
+./spec/image_spec.rb[1:3:1] | passed | 0.00036 seconds |

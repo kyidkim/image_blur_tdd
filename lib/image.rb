@@ -5,8 +5,11 @@ class Image
     @number_of_columns = @images[0].length
   end
   
+  def data
+    @images
+  end
   
-  def blur(distance)
+  def blur(distance = 1)
     @last_image = Marshal.load(Marshal.dump(@images))
     blur_distance_counter = 0
     
@@ -34,6 +37,7 @@ class Image
       @last_image = Marshal.load(Marshal.dump(@images))
     end
     
+    self
   end
   
   def on?(row, column)
@@ -56,12 +60,12 @@ class Image
 end
 
 # image = Image.new([
-#   [1, 0, 0, 0, 0, 0],
-#   [0, 0, 0, 0, 0, 0],
-#   [0, 0, 0, 0, 0, 0],
-#   [0, 0, 0, 0, 0, 0],
-#   [0, 0, 0, 0, 0, 0],
-#   [0, 0, 0, 0, 0, 1]
+#   [0, 0, 0, 0],
+#   [0, 0, 0, 0],
+#   [0, 0, 0, 0],
+#   [0, 1, 0, 0],
+#   [0, 0, 0, 0],
+#   [0, 0, 0, 0]
 # ]
 # )
 #
